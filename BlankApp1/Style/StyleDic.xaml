@@ -1,0 +1,486 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="BlockFrameBorder" TargetType="Border">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="#1a237e"/>
+    </Style>
+
+    <Style x:Key="HinbanFrameBorder" TargetType="Border">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="DimGray"/>
+        <Setter Property="Background" Value="#E8E8E8"/>
+    </Style>
+
+    <!--タイトル用テキストブロック-->
+    <Style x:Key="TitleText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="#B8CADD"/>
+        <Setter Property="Foreground" Value="#1a237e"/>
+    </Style>
+
+    <!--タイトル用テキストブロック-->
+    <Style x:Key="LowTitleText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="#B8CADD"/>
+        <Setter Property="Foreground" Value="#1a237e"/>
+        <Setter Property="Height" Value="23"/>
+    </Style>
+
+    <!--背景色なしテキストブロック（太字）-->
+    <Style x:Key="OtherText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!--背景色なしテキストブロック-->
+    <Style x:Key="NameDispText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!--注意分テキストブロック-->
+    <Style x:Key="CautionText" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!--ボタンタイトルテキストブロック-->
+    <Style x:Key="FKeyContentText" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="13.5"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsHitTestVisible" Value="False"/>
+    </Style>
+    
+    <!--読み取り専用テキストボックス-->
+    <Style x:Key="ReadOnlyTextBox" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <ContentPresenter x:Name="ContentElement" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+    </Style>
+
+    <!--パスワードボックス（IME OFF 数値アルファベットのみ）-->
+    <Style x:Key="PasswordText" TargetType="PasswordBox">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="InputMethod.IsInputMethodEnabled" Value="False"/>
+        <Setter Property="InputMethod.PreferredImeState" Value="On"/>
+        <Setter Property="InputMethod.PreferredImeConversionMode" Value="Alphanumeric"/>
+    </Style>
+
+    <!--テキストボックス（IME OFF 数値アルファベットのみ）-->
+    <Style x:Key="ContentText" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="InputMethod.IsInputMethodEnabled" Value="False"/>
+        <Setter Property="InputMethod.PreferredImeState" Value="On"/>
+        <Setter Property="InputMethod.PreferredImeConversionMode" Value="Alphanumeric"/>
+    </Style>
+
+    <!--テキストボックス（IME OFF 数値アルファベットのみ）-->
+    <Style x:Key="LowContentText" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="InputMethod.IsInputMethodEnabled" Value="False"/>
+        <Setter Property="InputMethod.PreferredImeState" Value="On"/>
+        <Setter Property="InputMethod.PreferredImeConversionMode" Value="Alphanumeric"/>
+        <Setter Property="Height" Value="23"/>
+    </Style>
+
+    <!--テキストボックス（日本語ひらがな入力）-->
+    <Style x:Key="ContentJpText" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="InputMethod.PreferredImeState" Value="On"/>
+        <Setter Property="InputMethod.PreferredImeConversionMode" Value="FullShape,Native"/>
+    </Style>
+
+    <!--テキストボックス（IME OFF　半角カナのみ）-->
+    <Style x:Key="ContentKanaText" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="InputMethod.PreferredImeState" Value="On"/>
+        <Setter Property="InputMethod.PreferredImeConversionMode" Value="Katakana,Native"/>
+    </Style>
+
+    <!--テキストボックス-->
+    <Style x:Key="InputText" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium"/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!--通常ボタン-->
+    <Style x:Key="NormalButton" TargetType="Button">
+        <Setter Property="Background" Value="#303f9f" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <!--タイトルボタン-->
+    <Style x:Key="TitleButton" TargetType="Button">
+        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="Background" Value="#303f9f" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <!--ファンクションキーボタン-->
+    <Style x:Key="FkeyButton" TargetType="Button" BasedOn="{StaticResource MahApps.Styles.Button}">
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="Background" Value="#303f9f" />
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <!--メニューボタン-->
+    <Style x:Key="MenuBotton" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+        <Setter Property="Height" Value="45"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Foreground" Value="#1a237e" />
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+    </Style>
+
+    <!--コンボボックス-->
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Yu Gothic UI "/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!--コンボボックス-->
+    <Style x:Key="LowComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Yu Gothic UI "/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Height" Value="23"/>
+    </Style>
+
+    <!--DatePicker-->
+    <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+        <Setter Property="FontFamily" Value="Yu Gothic UI "/>
+        <Setter Property="FontSize" Value="14.5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="InputMethod.IsInputMethodEnabled" Value="False"/>
+        <Setter Property="InputMethod.PreferredImeState" Value="On"/>
+        <Setter Property="InputMethod.PreferredImeConversionMode" Value="Alphanumeric"/>
+    </Style>
+
+    <!--データグリッド-->
+    <Style x:Key="BasicDataGrid" TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="RowBackground" Value="White"/>
+        <Setter Property="AlternatingRowBackground" Value="#EFF6F9"/>
+        <Setter Property="SelectionMode" Value="Extended"/>
+        <Setter Property="SelectionUnit" Value="CellOrRowHeader"/>
+        <Setter Property="VerticalGridLinesBrush" Value="#303f9f"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="#303f9f"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="RowHeaderWidth" Value="0"/>
+        <Setter Property="CanUserSortColumns" Value="False"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="EnableColumnVirtualization" Value="True"/>
+        <Setter Property="EnableRowVirtualization" Value="True"/>
+    </Style>
+
+    <!--データグリッド-->
+    <Style x:Key="GroupDataGrid" TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="RowBackground" Value="White"/>
+        <Setter Property="AlternatingRowBackground" Value="#EFF6F9"/>
+        <Setter Property="SelectionMode" Value="Extended"/>
+        <Setter Property="SelectionUnit" Value="CellOrRowHeader"/>
+        <Setter Property="VerticalGridLinesBrush" Value="#303f9f"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="#303f9f"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="RowHeaderWidth" Value="0"/>
+        <Setter Property="CanUserSortColumns" Value="False"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="EnableRowVirtualization" Value="True"/>
+        <Setter Property="EnableColumnVirtualization" Value="True"/>
+        <Setter Property="VirtualizingPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Visible"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="True"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="IsReadOnly" Value="True"/>
+    </Style>
+
+    <!--データグリッドカラムヘッダ-->
+    <Style x:Key="BasicDataGridColumnHeader" TargetType="DataGridColumnHeader">
+        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="Background" Value="#B8CADD" />
+        <Setter Property="Foreground" Value="#1a237e" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="13.5" />
+        <Setter Property="FontWeight" Value="UltraBold"/>
+    </Style>
+
+    <!--データグリッドカラムヘッダ-->
+    <Style x:Key="BasicLabelColumnHeader" TargetType="Label">
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="Background" Value="#B8CADD" />
+        <Setter Property="Foreground" Value="#1a237e" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="13.5" />
+        <Setter Property="FontWeight" Value="UltraBold"/>
+    </Style>
+
+    <!--データグリッドロー-->
+    <Style x:Key="GroupDataGridRow" TargetType="DataGridRow">
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Height" Value="27"/>
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
+    <!--データグリッドロー-->
+    <Style x:Key="BasicDataGridRow" TargetType="DataGridRow">
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Height" Value="27"/>
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
+    <!--ファイル名データグリッド-->
+    <Style x:Key="FileDataGrid" TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="RowBackground" Value="GhostWhite"/>
+        <Setter Property="AlternatingRowBackground" Value="Lavender"/>
+        <Setter Property="SelectionMode" Value="Single"/>
+        <Setter Property="SelectionUnit" Value="FullRow"/>
+        <Setter Property="IsReadOnly" Value="True"/>
+        <Setter Property="RowHeight" Value="32"/>
+        <Setter Property="VerticalGridLinesBrush" Value="White"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="White"/>
+        <Setter Property="IsTabStop" Value="True"/>
+        <Setter Property="RowHeaderWidth" Value="0"/>
+        <Setter Property="CanUserSortColumns" Value="False"/>
+    </Style>
+
+    <!--ファイル名データグリッドカラムヘッダ-->
+    <Style x:Key="FileDataGridColumnHeader" TargetType="DataGridColumnHeader">
+        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="Background" Value="Indigo" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="Yu Gothic"/>
+        <Setter Property="FontSize" Value="14.5" />
+        <Setter Property="FontWeight" Value="UltraBold"/>
+    </Style>
+
+    <!--ファイル名データグリッドロー-->
+    <Style x:Key="FileDataGridRow" TargetType="DataGridRow">
+        <Setter Property="FontFamily" Value="Yu Gothic Medium" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
+    <!--データグリッドセル-->
+    <Style x:Key="UnTabStopCell" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
+    <!--データグリッドセル-->
+    <Style x:Key="UnTabStopAlternateCell1L" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Background" Value="#EFF6F9"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="BorderThickness" Value="0.6,0,0,0"/>
+    </Style>
+    <Style x:Key="UnTabStopAlternateCell1C" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Background" Value="#EFF6F9"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="BorderThickness" Value="0.3,0,0.3,0"/>
+    </Style>
+    <Style x:Key="UnTabStopAlternateCell1R" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Background" Value="#EFF6F9"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="BorderThickness" Value="0,0,0.6,0"/>
+    </Style>
+
+    <!--データグリッドセル-->
+    <Style x:Key="UnTabStopAlternateCell2L" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="BorderThickness" Value="0.6,0,0,0"/>
+    </Style>
+    <Style x:Key="UnTabStopAlternateCell2C" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="BorderThickness" Value="0.3,0,0.3,0"/>
+    </Style>
+    <Style x:Key="UnTabStopAlternateCell2R" TargetType="{x:Type DataGridCell }">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#303f9f"/>
+        <Setter Property="BorderThickness" Value="0,0,0.6,0"/>
+    </Style>
+
+    <!--ラジオボタン-->
+    <Style x:Key="RadioButtonStyle" TargetType="{x:Type RadioButton}">
+        <!--<Setter Property="Background" Value="Blue"/>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <BulletDecorator Background="Transparent">
+                        <!--チェックあり状態-->
+                        <BulletDecorator.Bullet>
+                            <Grid Width="{TemplateBinding FontSize}" Height="{TemplateBinding FontSize}" VerticalAlignment="Center">
+                                <Ellipse Fill="White" Stroke="Gray" Grid.Column="0"/>
+                                <Ellipse Margin="3" Fill="Black" x:Name="CheckMark"/>
+                            </Grid>
+                        </BulletDecorator.Bullet>
+                        <ContentPresenter Grid.Column="1" VerticalAlignment="Center" Margin="2,0,0,0"/>
+                    </BulletDecorator>
+
+                    <ControlTemplate.Triggers>
+                        <!--チェック無し状態、内側の●を非表示にする-->
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#FFCCCCCC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--グループボックス-->
+    <Style x:Key="DefaultGroupBox" TargetType="GroupBox">
+    </Style>
+
+    <!--エキスパンダーボックス-->
+    <Style x:Key="DefaultExpander" TargetType="Expander">
+    </Style>
+
+    <!--ボタン-->
+    <ControlTemplate  x:Key="ButtonTemplate" TargetType="Button">
+        <!--角の丸みを取りたいためGridを使用-->
+        <Grid x:Name="MyButton" Background="{TemplateBinding Background}">
+            <!--ボタンの枠線-->
+            <Border x:Name="MyBorder" BorderBrush="Indigo" BorderThickness="1"/>
+            <!--ボタン内のコンテンツ（テキストなど）-->
+            <ContentPresenter x:Name="Presenter"
+                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          />
+
+            <!--各イベントで表示を変えたいためVisualStateManagerを使用する-->
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="CommonStates">
+                    <!--通常時（これが無いとマウスが外れても表示が戻らない）-->
+                    <VisualState Name="Normal" />
+                    <!--マウスオーバー時-->
+                    <VisualState Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="MyButton"
+                                       Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                       Duration="00:00:00.1"
+                                       To="DarkOrchid" />
+                            <ColorAnimation Storyboard.TargetName="Presenter"
+                                       Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                       Duration="00:00:00.1"
+                                       To="LavenderBlush" />
+                        </Storyboard>
+                    </VisualState>
+                    <!--ボタン押下時-->
+                    <VisualState Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="MyButton"
+                                       Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
+                                       Duration="00:00:00.1"
+                                       To="Indigo" />
+                            <ColorAnimation Storyboard.TargetName="Presenter"
+                                       Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                       Duration="00:00:00.1"
+                                       To="White" />
+                            <ThicknessAnimation Storyboard.TargetName="MyButton"
+                                            Storyboard.TargetProperty="Margin"
+                                            Duration="00:00:00.1"
+                                            To="0,0,0,0" />
+                        </Storyboard>
+                    </VisualState>
+                    <!--ボタン無効化時-->
+                    <VisualState Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="MyBorder"
+                                       Storyboard.TargetProperty="BorderBrush.(SolidColorBrush.Color)"
+                                       To="Indigo"/>
+                            <ColorAnimation Storyboard.TargetName="Presenter"
+                                       Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                       To="DarkGray"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>
